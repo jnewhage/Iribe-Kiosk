@@ -1,0 +1,75 @@
+<html lang=en>
+<head>
+	<meta charset="UTF-8"> 
+	<title>Map</title>
+	<link rel="stylesheet" href="./css/kiosk_style.css">
+	<link rel="stylesheet" href="./css/map_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="img/favicon.png">
+	<script type="text/javascript" src="./js/kiosk_scripts.js"></script> 
+	<script type="text/javascript" src="./js/map_scripts.js"></script> 
+</head>
+
+<body onload="showTime();document.getElementById('search').value='';">
+<script type="text/javascript" src="./common/header.js"></script> 
+<script type="text/javascript" src="./common/sidenav.js"></script> 
+<script type="text/javascript" src="./common/footer.js"></script> 
+
+<div class="main">
+	<center>
+		<div class="title">
+			<h1>Enter Room Number for Directions: </h1>
+			<form class="roomSearch">
+				<input type="text" id="search" placeholder="0000"/>
+			</form>
+		</div>
+		<div class="alert" id="invalid" style="display:none">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			Please enter a valid room number.
+		</div>
+		<div class="alert" id="limit" style="display:none">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			Reached length limit.
+		</div>
+	</center>
+	
+	<center>
+		<div class="keyboard" id="keyboard">
+			<input class="num_button" type="button" value="1">
+			<input class="num_button" type="button" value="2">
+			<input class="num_button" type="button" value="3">
+			<input class="num_button" type="button" value="4">
+			<input class="num_button" type="button" value="5">
+			<input type="button" value="6">
+			<input type="button" value="7">
+			<input type="button" value="8">
+			<input type="button" value="9">
+			<input type="button" value="0">
+			<input id="back" type="button" value="&#8592;">
+			<input id="enter" type="button" value="Enter">
+		</div>
+	</center>
+	
+	<center>
+		<div class="display">
+			<a href="maps/GroundFloor.html"><img class="left hover-shadow" src="img/maps/GroundFloor.png"></a>
+			<a href="maps/FirstFloor.html"><img class="middle hover-shadow" src="img/maps/FirstFloor.png"></a>
+			<a href="maps/SecondFloor.html"><img class="right hover-shadow" src="img/maps/SecondFloor.png"></a>
+			<button class="button" onclick="window.location.href='maps/GroundFloor.html'">View Ground Floor</button>
+			<button class="button" onclick="window.location.href='maps/FirstFloor.html'">View First Floor</button>
+			<button class="button" onclick="window.location.href='maps/SecondFloor.html'">View Second Floor</button>
+			<a href="maps/ThirdFloor.html"><img class="left hover-shadow" src="img/maps/ThirdFloor.png"></a>
+			<a href="maps/FourthFloor.html"><img class="middle hover-shadow" src="img/maps/FourthFloor.png"></a>
+			<a href="maps/FifthFloor.html"><img class="right hover-shadow" src="img/maps/FifthFloor.png"></a>
+			<button class="button" onclick="window.location.href='maps/ThirdFloor.html'">View Third Floor</button>
+			<button class="button" onclick="window.location.href='maps/FourthFloor.html'">View Fourth Floor</button>
+			<button class="button" onclick="window.location.href='maps/FifthFloor.html'">View Fifth Floor</button>
+			<a href="maps/Mezzanine.html"><img class="left hover-shadow" src="img/maps/Mezzanine.png"></a>
+			<a href="maps/Basement.html"><img class="middle hover-shadow" src="img/maps/Basement.png"></a>
+			<a href="maps/Roof.html"><img class="right hover-shadow" src="img/maps/Roof.png"></a>
+			<button class="button" onclick="window.location.href='maps/Mezzanine.html'">View Mezzanine</button>
+			<button class="button" onclick="window.location.href='maps/Basement.html'">View Basement</button>
+			<button class="button" onclick="window.location.href='maps/Roof.html'">View Roof</button>
+		</div>
+	</center>
+</body>

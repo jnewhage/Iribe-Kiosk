@@ -1,0 +1,36 @@
+<html lang=en>
+<head>
+	<meta charset="UTF-8"> 
+	<title>Help</title>
+	<link rel="stylesheet" href="./css/kiosk_style.css">
+	<link rel="stylesheet" href="./css/help_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="img/favicon.png">
+	<script type="text/javascript" src="./js/kiosk_scripts.js"></script> 
+	<script type="text/javascript" src="./js/help_scripts.js"></script> 
+</head>
+
+<body onload="showTime();" id="set">
+	<script type="text/javascript" src="./common/header.js"></script> 
+	<script type="text/javascript" src="./common/sidenav.js"></script> 
+	<script type="text/javascript" src="./common/footer.js"></script> 
+
+	<div class="main">
+		<center><div class="title"><h1>Help Options</h1></div></center>
+
+		<center>
+			<div class="menu">
+				<button class="button" onclick="increaseFont();">Increase Font Size</button>
+				<br>
+				<button class="button" onclick="decreaseFont();">Decrease Font Size</button>
+				<br>
+				<button class="button" onclick="document.getElementsByClassName('alert')[0].style.display='';">Emergency</button>
+				<div class="alert" style="display:none">
+					<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+					Contacting Emergency Services...
+				</div>
+			</div>
+		</center>
+	</div>
+</body>
+</html>

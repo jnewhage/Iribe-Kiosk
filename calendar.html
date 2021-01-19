@@ -1,0 +1,98 @@
+<!-- Code adapted from https://youtu.be/o1yMqPyYeAo -->
+<html lang=en>
+<head>
+	<meta charset="UTF-8"> 
+	<title>Calendar</title>
+	<link rel="stylesheet" href="./css/kiosk_style.css">
+	<link rel="stylesheet" href="./css/calendar_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="img/favicon.png">
+	<script type="text/javascript" src="./js/kiosk_scripts.js"></script>
+	<script type="text/javascript" src="./js/calendar_scripts.js"></script>
+</head>
+
+<body onload="showTime();populateCalendar();">
+<script type="text/javascript" src="./common/header.js"></script> 
+<script type="text/javascript" src="./common/sidenav.js"></script> 
+<script type="text/javascript" src="./common/footer.js"></script>
+<div class="main">
+    <center>
+		<div class="month">
+			<i class="fa fa-angle-left prev1"></i>
+			<div class="date">
+				<h1 id = "month_name"></h1>
+			</div>
+			<i class="fa fa-angle-right next1"></i>
+		</div>
+	</center>
+	
+	<center>
+		<div class="calendar">
+			<div class="weekdays">
+				<div>Sun</div>
+				<div>Mon</div>
+				<div>Tue</div>
+				<div>Wed</div>
+				<div>Thu</div>
+				<div>Fri</div>
+				<div>Sat</div>
+			</div>
+			<div class="days">
+				'&nbsp'
+			</div>
+		</div>
+	</center>
+	
+	<center>
+		<div class="side">
+			<div class = "form">
+			  <center>
+			  <form>
+				<h2> Filter Events </h2>
+				<label class="container">
+					<input checked type="checkbox" onchange ="filterEvents()" id="socialEvents">
+					<span class="checkmark"></span>
+					Social Events <i class="fa fa-users"></i>
+				</label>
+				<label class="container">
+					<input checked type="checkbox" onchange ="filterEvents()" id="corporateEvents">
+					<span class="checkmark"></span>
+					Corporate Events <i class="fa fa-handshake-o"></i>
+				</label>
+				<label class="container">
+					<input checked type="checkbox" onchange ="filterEvents()" id="outreachEvents">
+					<span class="checkmark"></span>
+					Outreach Events <i class="fa fa-globe"></i>
+				</label>
+			  </form>
+			  </center>
+			</div>
+			<br>
+			<div class="alert" style="display:none">
+				<center>
+					<span class="closebtn" onclick="this.parentElement.parentElement.style.display='none';">&times;</span>
+					<h2 id = "description_title"> </h2>
+					<p id = "description"> </p>
+				</center>
+			</div>
+		</div>
+	</center>
+	<center><div class="list">
+		<h3>List of Events</h3>
+		<ul id="dates">
+			<li class="dates">November 3, 10, 17, 24</li>
+			<li class="dates">November 6</li>
+			<li class="dates">November 12</li>
+			<li class="dates">November 19</li>
+			<li class="dates">November 25</li>
+		</ul>
+		<ul id="events">
+			<li style=""><a href="calendar.html#" onclick ="communityOutreach();showDescription();">Iribe Initiative for Inclusion and Diversity in Computing</a></li>
+			<li style=""><a href="calendar.html#" onclick ="socialEventTwo();showDescription();">Iribe Initiative and Code: BLACK Social</a></li>
+			<li style=""><a href="calendar.html#" onclick ="corporateEventTwo();showDescription();">Geico Lobby Day</a></li>
+			<li style=""><a href="calendar.html#" onclick ="socialEventOne();showDescription();">CS Student Organization Fair</a></li>
+			<li style=""><a href="calendar.html#" onclick ="corporateEventOne();showDescription();">Late CS Fall Career Center</a></li>
+		</ul>
+	</div></center>
+</body>
+</html>

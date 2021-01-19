@@ -1,0 +1,46 @@
+<html lang=en>
+<head>
+	<meta charset="UTF-8"> 
+	<title>Map</title>
+	<link rel="stylesheet" href="../css/kiosk_style.css">
+	<link rel="stylesheet" href="../css/map_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="../img/favicon.png">
+	<script type="text/javascript" src="../js/kiosk_scripts.js"></script> 
+	<script type="text/javascript" src="../js/map_scripts.js"></script> 
+</head>
+
+<body onload="showTime();">
+<script type="text/javascript" src="header.js"></script> 
+<script type="text/javascript" src="sidenav.js"></script> 
+<script type="text/javascript" src="footer.js"></script> 
+
+<div class="main">	
+	<div class="keyboard" id="keyboard">
+		<input id="page_back" type="button" value="Back">
+	</div>
+	<center>
+		<div class="dual">
+			<img src="../img/directions/Elevator.png" class="hover-shadow cursor" onclick="openModal();">	
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<span class="zoom-in-button"><button class="zoom" type="button" onclick="zoomIn()"><i class="fa fa-search-plus"></i></button></span>
+				<span class="zoom-out-button"><button class="zoom" type="button" onclick="zoomOut()"><i class="fa fa-search-minus"></i></button></span>
+				<div class="modal-content">
+					<img id= "img" src="../img/directions/Elevator.png" class="modal-content-img">
+				</div>
+			</div>
+			<img src="../img/directions/5240.png" class="hover-shadow cursor" onclick="openModal2();">
+			<div id="myModal2" class="modal">
+				<span class="close cursor" onclick="closeModal2()">&times;</span>
+				<span class="zoom-in-button"><button class="zoom" type="button" onclick="zoomIn2()"><i class="fa fa-search-plus"></i></button></span>
+				<span class="zoom-out-button"><button class="zoom" type="button" onclick="zoomOut2()"><i class="fa fa-search-minus"></i></button></span>
+				<div class="modal-content">
+					<img id= "img2" src="../img/directions/5240.png" class="modal-content-img">
+				</div>
+			</div>	
+		</div>
+	</center>
+	
+	</div>
+</body>

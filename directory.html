@@ -1,0 +1,273 @@
+<html lang=en>
+<head>
+	<meta charset="UTF-8"> 
+	<title>Directory</title>
+	<link rel="stylesheet" href="./css/kiosk_style.css">
+	<link rel="stylesheet" href="./css/directory_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="img/favicon.png">
+	<script type="text/javascript" src="./js/kiosk_scripts.js"></script> 
+	<script type="text/javascript" src="./js/directory_scripts.js"></script> 
+</head>
+
+<body onload="showTime();">
+<script type="text/javascript" src="./common/header.js"></script> 
+<script type="text/javascript" src="./common/sidenav.js"></script> 
+<script type="text/javascript" src="./common/footer.js"></script>
+<div class="note">Skip to Last Name by Initial</div>
+
+<div class="main">
+	<center>
+		<div class="title"><h1>Staff Directory</h1></div>
+		<form class="searchbar">
+			<i class="fa fa-search" id="search-icon"></i> <input type="text" id="search" placeholder="Search for Faculty.." onclick="displayKeyboard()">
+			<select name="floor" id="floor" onchange="filterFloors()">
+				<option value="all">All Floors</option>
+				<option value="1">1st Floor</option>
+				<option value="2">2nd Floor</option>
+				<option value="3">3rd Floor</option>
+				<option value="4">4th Floor</option>
+				<option value="5">5th Floor</option>
+			</select> 
+			<select name="course" id="course" onchange="filterCourses()">
+				<option value="all">All Courses</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+				<option value="300">300</option>
+				<option value="400">400</option>
+				<option value="700">700</option>
+				<option value="800">800</option>
+			</select> 
+		</form>
+	</center>
+	<div class="horizontal-menu">
+		<a href="#Agrawala">A</a>
+		<a href="#Battle">B</a>
+		<a href="#Carpuat">C</a>
+		<a href="#Dachman-Soled">D</a>
+		<a href="#Eastman">E</a>
+		<a href="#Feizi">F</a>
+		<a href="#Gasarch">G</a>
+		<a href="#Herman">H</a>
+		<a href="#Keleher">I</a>
+		<a href="#Keleher">J</a>
+		<a href="#Keleher">K</a>
+		<a href="#Levin">L</a>
+		<a href="#Mamat">M</a>
+		<a href="#Nau">N</a>
+		<a href="#Padua-Perez">O</a>
+		<a href="#Padua-Perez">P</a>
+		<a href="#Reggia">Q</a>
+		<a href="#Reggia">R</a>
+		<a href="#Sadeghian">S</a>
+		<a href="#Teli">T</a>
+		<a href="#Van Horn">U</a>
+		<a href="#Van Horn">V</a>
+		<a href="#Wu">W</a>
+		<a href="#Yoon">X</a>
+		<a href="#Yoon">Y</a>
+		<a href="#Zwicker">Z</a>
+	</div>
+	
+	<center id="lists">
+		<ul id="leftList">
+			<li class="top" id="left_title">Faculty <i class="fa fa-caret-down" id="sort1" onclick="sortList1()"></i></li>
+			<span class="anchor" id="Agrawala"></span><li><a class="no-hover">Ashok Agrawala</a></li>
+			<span class="anchor" id="Aloimonos"></span><li><a class="no-hover">John Aloimonos</a></li>
+			<span class="anchor" id="Battle"></span><li><a class="no-hover">Leilani Battle</a></li>
+			<span class="anchor" id="Bhattacharjee"></span><li><a class="no-hover">Bobby Bhattacharjee</a></li>
+			<span class="anchor" id="Carpuat"></span><li><a class="no-hover">Marine Carpuat</a></li>
+			<span class="anchor" id="Bravo"></span><li><a class="no-hover">Hector Corrada Bravo</a></li>
+			<span class="anchor" id="Dachman-Soled"></span><li><a class="no-hover">Dana Dachman-Soled</a></li>
+			<span class="anchor" id="Floriani"></span><li><a class="no-hover">Leila De Floriani</a></li>
+			<span class="anchor" id="Deshpande"></span><li><a class="no-hover">Amol Deshpande</a></li>
+			<span class="anchor" id="Dickerson"></span><li><a class="no-hover">John Dickerson</a></li>
+			<span class="anchor" id="Duraiswami"></span><li><a class="no-hover">Ramani Duraiswami</a></li>
+			<span class="anchor" id="Eastman"></span><li><a class="no-hover">Roger Eastman</a></li>
+			<span class="anchor" id="Emad"></span><li><a class="no-hover">Fawzi Emad</a></li>
+			<span class="anchor" id="Feizi"></span><li><a class="no-hover">Soheil Feizi</a></li>
+			<span class="anchor" id="Gasarch"></span><li><a class="no-hover">William Gasarch</a></li>
+			<span class="anchor" id="Goldstein"></span><li><a class="no-hover">Tom Goldstein</a></li>
+			<span class="anchor" id="Golub"></span><li><a class="no-hover">Evan Golub</a></li>
+			<span class="anchor" id="Herman"></span><li><a class="no-hover">Larry Herman</a></li>
+			<span class="anchor" id="Hugue"></span><li><a class="no-hover">Michelle Hugue</a></li>
+			<span class="anchor" id="Keleher"></span><li><a class="no-hover">Pete Keleher</a></li>
+			<span class="anchor" id="Kruskal"></span><li><a class="no-hover">Clyde Kruskal</a></li>
+			<span class="anchor" id="Levin"></span><li><a class="no-hover">Dave Levin</a></li>
+			<span class="anchor" id="Mamat"></span><li><a class="no-hover">Anwar Mamat</a></li>
+			<span class="anchor" id="Manocha"></span><li><a class="no-hover">Dinesh Manocha</a></li>
+			<span class="anchor" id="Marsh"></span><li><a class="no-hover">Michael Marsh</a></li>
+			<span class="anchor" id="Mazurek"></span><li><a class="no-hover">Michelle Mazurek</a></li>
+			<span class="anchor" id="Mount"></span><li><a class="no-hover">David Mount</a></li>
+			<span class="anchor" id="Nau"></span><li><a class="no-hover">Dana Nau</a></li>
+			<span class="anchor" id="Padua-Perez"></span><li><a class="no-hover">Nelson Padua-Perez</a></li>
+			<span class="anchor" id="Patro"></span><li><a class="no-hover">Robert Patro</a></li>
+			<span class="anchor" id="Peng"></span><li><a class="no-hover">Huaishu Peng</a></li>
+			<span class="anchor" id="Purtilo"></span><li><a class="no-hover">James Purtilo</a></li>
+			<span class="anchor" id="Reggia"></span><li><a class="no-hover">James Reggia</a></li>
+			<span class="anchor" id="Roy"></span><li><a class="no-hover">Nirupam Roy</a></li>
+			<span class="anchor" id="Sadeghian"></span><li><a class="no-hover">Pedram Sadeghian</a></li>
+			<span class="anchor" id="Udaya"></span><li><a class="no-hover">A. Shankar Udaya</a></li>
+			<span class="anchor" id="Shrivastava"></span><li><a class="no-hover">Abhinav Shrivastava</a></li>
+			<span class="anchor" id="Teli"></span><li><a class="no-hover">Mohammad Nayeem Teli</a></li>
+			<span class="anchor" id="Tokekar"></span><li><a class="no-hover">Pratap Tokekar</a></li>
+			<span class="anchor" id="Van_Horn"></span><li><a class="no-hover">David Van Horn</a></li>
+			<span class="anchor" id="Vishkin"></span><li><a class="no-hover">Uzi Vishkin</a></li>
+			<span class="anchor" id="Wu"></span><li><a class="no-hover">Xiaodi Wu</a></li>
+			<span class="anchor" id="Yoon"></span><li><a class="no-hover">lchul Yoon</a></li>
+			<span class="anchor" id="Zwicker"></span><li><a class="no-hover">Matthias Zwicker</a></li>
+		</ul>
+		<ul id="centerList">
+			<li class="top" id="centerTitle">Rooms <i class="fa fa-caret-down" id="sort2" onclick="sortList2()"></i></</li>
+			<li><a href="maps/5204.html">IRB 5204</a></li>
+			<li><a href="maps/4214.html">IRB 4214</a></li>
+			<li><a href="maps/5148.html">IRB 5148</a></li>
+			<li><a href="maps/5140.html">IRB 5140</a></li>
+			<li><a href="maps/4130.html">IRB 4130</a></li>
+			<li><a href="maps/3226.html">IRB 3226</a></li>
+			<li><a href="maps/5238.html">IRB 5238</a></li>
+			<li><a href="maps/4132.html">IRB 4132</a></li>
+			<li><a href="maps/5154.html">IRB 5154</a></li>
+			<li><a href="maps/4128.html">IRB 4128</a></li>
+			<li><a href="maps/4244.html">IRB 4244</a></li>
+			<li><a href="maps/1126.html">IRB 1126</a></li>
+			<li><a href="maps/2212.html">IRB 2212</a></li>
+			<li><a href="maps/4202.html">IRB 4202</a></li>
+			<li><a href="maps/2242.html">IRB 2242</a></li>
+			<li><a href="maps/4212.html">IRB 4212</a></li>
+			<li><a href="maps/1210.html">IRB 1210</a></li>
+			<li><a href="maps/1124.html">IRB 1124</a></li>
+			<li><a href="maps/1250.html">IRB 1250</a></li>
+			<li><a href="maps/5146.html">IRB 5146</a></li>
+			<li><a href="maps/2240.html">IRB 2240</a></li>
+			<li><a href="maps/5222.html">IRB 5222</a></li>
+			<li><a href="maps/1212.html">IRB 1212</a></li>
+			<li><a href="maps/5164.html">IRB 5164</a></li>
+			<li><a href="maps/2218.html">IRB 2218</a></li>
+			<li><a href="maps/5236.html">IRB 5236</a></li>
+			<li><a href="maps/4162.html">IRB 4162</a></li>
+			<li><a href="maps/4158.html">IRB 4158</a></li>
+			<li><a href="maps/2210.html">IRB 2210</a></li>
+			<li><a href="maps/3220.html">IRB 3220</a></li>
+			<li><a href="maps/4206.html">IRB 4206</a></li>
+			<li><a href="maps/5214.html">IRB 5214</a></li>
+			<li><a href="maps/4124.html">IRB 4124</a></li>
+			<li><a href="maps/5240.html">IRB 5240</a></li>
+			<li><a href="maps/2214.html">IRB 2214</a></li>
+			<li><a href="maps/5150.html">IRB 5150</a></li>
+			<li><a href="maps/4238.html">IRB 4238</a></li>
+			<li><a href="maps/1128.html">IRB 1128</a></li>
+			<li><a href="maps/4222.html">IRB 4222</a></li>
+			<li><a href="maps/5250.html">IRB 5250</a></li>
+			<li><a href="maps/5216.html">IRB 5216</a></li>
+			<li><a href="maps/5210.html">IRB 5210</a></li>
+			<li><a href="maps/1248.html">IRB 1248</a></li>
+			<li><a href="maps/5244.html">IRB 5244</a></li>
+		</ul>
+		<ul id="rightList">
+			<li class="top" id="rightTitle">Classes <i class="fa fa-caret-down" id="sort3" onclick="sortList3()"></i></</a></li>
+			<li><a class="no-hover">CMSC412 </a></li>
+			<li><a class="no-hover">CMSC733 </a></li>
+			<li><a class="no-hover">CMSC498O </a></li>
+			<li><a class="no-hover">CMSC711 </a></li>
+			<li><a class="no-hover">CMSC828B </a></li>
+			<li><a class="no-hover">CMSC320</a></li>
+			<li><a class="no-hover">CMSC456 </a></li>
+			<li><a class="no-hover">CMSC498Q </a></li>
+			<li><a class="no-hover">CMSC424</a></li>
+			<li><a class="no-hover">CMSC389K, CMSC389V</a></li>
+			<li><a class="no-hover">CMSC800 </a></li>
+			<li><a class="no-hover">CMSC330, CMSC425</a></li>
+			<li><a class="no-hover">CMSC132 </a></li>
+			<li><a class="no-hover">CMSC422 </a></li>
+			<li><a class="no-hover">CMSC452, CMSC858R</a></li>
+			<li><a class="no-hover">CMSC389O, CMSC764</a></li>
+			<li><a class="no-hover">CMSC388L, CMSC434</a></li>
+			<li><a class="no-hover">CMSC132 </a></li>
+			<li><a class="no-hover">CMSC411 </a></li>
+			<li><a class="no-hover">CMSC436 </a></li>
+			<li><a class="no-hover">CMSC351, CMSC451</a></li>
+			<li><a class="no-hover">CMSC396H, CMSC414</a></li>
+			<li><a class="no-hover">CMSC330, CMSC433 </a></li>
+			<li><a class="no-hover">CMSC818N </a></li>
+			<li><a class="no-hover">CMSC414, CMSC420</a></li>
+			<li><a class="no-hover">CMSC818D </a></li>
+			<li><a class="no-hover">CMSC754 </a></li>
+			<li><a class="no-hover">CMSC722 </a></li>
+			<li><a class="no-hover">CMSC131, CMSC133</a></li>
+			<li><a class="no-hover">CMSC423 </a></li>
+			<li><a class="no-hover">CMSC838J </a></li>
+			<li><a class="no-hover">CMSC435 </a></li>
+			<li><a class="no-hover">CMSC422 </a></li>
+			<li><a class="no-hover">CMSC417 </a></li>
+			<li><a class="no-hover">CMSC131 </a></li>
+			<li><a class="no-hover">CMSC216 </a></li>
+			<li><a class="no-hover">CMSC498L </a></li>
+			<li><a class="no-hover">CMSC351, CMSC426</a></li>
+			<li><a class="no-hover">CMSC421 </a></li>
+			<li><a class="no-hover">CMSC838E </a></li>
+			<li><a class="no-hover">CMSC751 </a></li>
+			<li><a class="no-hover">CMSC457 </a></li>
+			<li><a class="no-hover">CMSC216 </a></li>
+			<li><a class="no-hover">CMSC740 </a></li>
+		</ul>
+	</center>
+	
+	<center>
+			<div class="keyboard" id="keyboard" style="display:none">
+				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+				<div>
+					<input type="button" value="1">
+					<input type="button" value="2">
+					<input type="button" value="3">
+					<input type="button" value="4">
+					<input type="button" value="5">
+					<input type="button" value="6">
+					<input type="button" value="7">
+					<input type="button" value="8">
+					<input type="button" value="9">
+					<input type="button" value="0">
+				</div>
+				<div>
+					<input id="q" type="button" value="Q">
+					<input id="w" type="button" value="W">
+					<input id="e" type="button" value="E">
+					<input id="r" type="button" value="R">
+					<input id="t" type="button" value="T">
+					<input id="y" type="button" value="Y">
+					<input id="u" type="button" value="U">
+					<input id="i" type="button" value="I">
+					<input id="o" type="button" value="O">
+					<input id="p" type="button" value="P">
+				</div>
+				<div>
+					<input id="a" type="button" value="A">
+					<input id="s" type="button" value="S">
+					<input id="d" type="button" value="D">
+					<input id="f" type="button" value="F">
+					<input id="g" type="button" value="G">
+					<input id="h" type="button" value="H">
+					<input id="j" type="button" value="J">
+					<input id="k" type="button" value="K">
+					<input id="l" type="button" value="L">
+				</div>
+				<div>
+					<input id="z" type="button" value="Z">
+					<input id="x" type="button" value="X">
+					<input id="c" type="button" value="C">
+					<input id="v" type="button" value="V">
+					<input id="b" type="button" value="B">
+					<input id="n" type="button" value="N">
+					<input id="m" type="button" value="M">
+					<input id="back" type="button" value="&#8592;">
+				</div>
+				<div>
+					<input id="caps" type="button" value="&#8679">
+					<input id="space" type="button" value=" ">
+					<input id="clear" type="reset" value="clear">
+				</div>
+			</div>
+		</center>
+</div>
+</body>
+</html>

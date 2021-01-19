@@ -1,0 +1,225 @@
+<html lang=en>
+<head>
+	<meta charset="UTF-8"> 
+	<title>Search</title>
+	<link rel="stylesheet" href="./css/kiosk_style.css">
+	<link rel="stylesheet" href="./css/search_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="img/favicon.png">
+	<script type="text/javascript" src="./js/kiosk_scripts.js"></script> 
+	<script type="text/javascript" src="./js/search_scripts.js"></script> 
+</head>
+
+<body onload="showTime();document.getElementById('search').value='';">
+	<div class="header">
+		<img src="./img/logo/umd3.png" class="logo">
+		<div class="clock">
+			<div id="time" type="time"></div>
+			<div id="date" type="date"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./common/sidenav.js"></script> 
+	<script type="text/javascript" src="./common/footer.js"></script> 
+
+	<div class="main">
+		<center>
+			<form class="searchbar">
+				<i class="fa fa-search" id="search-icon"></i> <input type="text" id="search" placeholder="Search for Faculty, Rooms, and Events.." onclick="displayKeyboard()">
+				<!-- <label for="floor">Filter by floor: </label> -->
+				<select name="floor" id="floor" onchange="filterFloors()">
+					<option value="all">All Floors</option>
+					<option value="ground">Ground Floor</option>
+					<option value="1">1st Floor</option>
+					<option value="2">2nd Floor</option>
+					<option value="3">3rd Floor</option>
+					<option value="4">4th Floor</option>
+					<option value="5">5th Floor</option>
+				</select> 
+				<!-- <label for="event">Filter by event type: </label> -->
+				<select name="event" id="event" onchange="filterEvents()">
+					<option value="all">All Events</option>
+					<option value="social">Social Events</option>
+					<option value="corporate">Corporate Events</option>
+					<option value="outreach">Outreach Events</option>
+				</select> 
+			</form>
+		</center>
+		
+		<center>
+			<div class="results">
+				<div class="alert" id="invalid" style="display:none">
+					<span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+					Search returned no results. Please try again.
+				</div>
+				<ul id="leftList">
+					<li style="display:none"><a href="directory.html#Agrawala">Ashok Agrawala</a></li>
+					<li style="display:none"><a href="directory.html#Aloimonos">John Aloimonos</a></li>
+					<li style="display:none"><a href="directory.html#Battle">Leilani Battle</a></li>
+					<li style="display:none"><a href="directory.html#Bhattacharjee">Bobby Bhattacharjee</a></li>
+					<li style="display:none"><a href="directory.html#Carpuat">Marine Carpuat</a></li>
+					<li style="display:none"><a href="directory.html#Bravo">Hector Corrada Bravo</a></li>
+					<li style="display:none"><a href="directory.html#Dachman-Soled">Dana Dachman-Soled</a></li>
+					<li style="display:none"><a href="directory.html#Floriani">Leila De Floriani</a></li>
+					<li style="display:none"><a href="directory.html#Deshpande">Amol Deshpande</a></li>
+					<li style="display:none"><a href="directory.html#Dickerson">John Dickerson</a></li>
+					<li style="display:none"><a href="directory.html#Duraiswami">Ramani Duraiswami</a></li>
+					<li style="display:none"><a href="directory.html#Eastman">Roger Eastman</a></li>
+					<li style="display:none"><a href="directory.html#Emad">Fawzi Emad</a></li>
+					<li style="display:none"><a href="directory.html#Feizi">Soheil Feizi</a></li>
+					<li style="display:none"><a href="directory.html#Gasarch">William Gasarch</a></li>
+					<li style="display:none"><a href="directory.html#Goldstein">Tom Goldstein</a></li>
+					<li style="display:none"><a href="directory.html#Golub">Evan Golub</a></li>
+					<li style="display:none"><a href="directory.html#Herman">Larry Herman</a></li>
+					<li style="display:none"><a href="directory.html#Hugue">Michelle Hugue</a></li>
+					<li style="display:none"><a href="directory.html#Keleher">Pete Keleher</a></li>
+					<li style="display:none"><a href="directory.html#Kruskal">Clyde Kruskal</a></li>
+					<li style="display:none"><a href="directory.html#Levin">Dave Levin</a></li>
+					<li style="display:none"><a href="directory.html#Mamat">Anwar Mamat</a></li>
+					<li style="display:none"><a href="directory.html#Manocha">Dinesh Manocha</a></li>
+					<li style="display:none"><a href="directory.html#Marsh">Michael Marsh</a></li>
+					<li style="display:none"><a href="directory.html#Mazurek">Michelle Mazurek</a></li>
+					<li style="display:none"><a href="directory.html#Mount">David Mount</a></li>
+					<li style="display:none"><a href="directory.html#Nau">Dana Nau</a></li>
+					<li style="display:none"><a href="directory.html#Padua-Perez">Nelson Padua-Perez</a></li>
+					<li style="display:none"><a href="directory.html#Patro">Robert Patro</a></li>
+					<li style="display:none"><a href="directory.html#Peng">Huaishu Peng</a></li>
+					<li style="display:none"><a href="directory.html#Purtilo">James Purtilo</a></li>
+					<li style="display:none"><a href="directory.html#Reggia">James Reggia</a></li>
+					<li style="display:none"><a href="directory.html#Roy">Nirupam Roy</a></li>
+					<li style="display:none"><a href="directory.html#Sadeghian">Pedram Sadeghian</a></li>
+					<li style="display:none"><a href="directory.html#Udaya">A. Shankar Udaya</a></li>
+					<li style="display:none"><a href="directory.html#Shrivastava">Abhinav Shrivastava</a></li>
+					<li style="display:none"><a href="directory.html#Teli">Mohammad Nayeem Teli</a></li>
+					<li style="display:none"><a href="directory.html#Tokekar">Pratap Tokekar</a></li>
+					<li style="display:none"><a href="directory.html#Van_Horn">David Van Horn</a></li>
+					<li style="display:none"><a href="directory.html#Vishkin">Uzi Vishkin</a></li>
+					<li style="display:none"><a href="directory.html#Wu">Xiaodi Wu</a></li>
+					<li style="display:none"><a href="directory.html#Yoon">lchul Yoon</a></li>
+					<li style="display:none"><a href="directory.html#Zwicker">Matthias Zwicker</a></li>
+				</ul>
+				<ul id="centerList">
+					<li style="display:none"><a href="maps/0102.html">IRB 0102</a></li>
+					<li style="display:none"><a href="maps/0108.html">IRB 0108</a></li>
+					<li style="display:none"><a href="maps/0112.html">IRB 0112</a></li>
+					<li style="display:none"><a href="maps/0116.html">IRB 0116</a></li>
+					<li style="display:none"><a href="maps/0120.html">IRB 0120</a></li>
+					<li style="display:none"><a href="maps/1104.html">IRB 1104</a></li>
+					<li style="display:none"><a href="maps/1108.html">IRB 1108</a></li>
+					<li style="display:none"><a href="maps/1124.html">IRB 1124</a></li>
+					<li style="display:none"><a href="maps/1126.html">IRB 1126</a></li>
+					<li style="display:none"><a href="maps/1128.html">IRB 1128</a></li>
+					<li style="display:none"><a href="maps/1202.html">IRB 1202</a></li>
+					<li style="display:none"><a href="maps/1204.html">IRB 1204</a></li>
+					<li style="display:none"><a href="maps/1206.html">IRB 1206</a></li>
+					<li style="display:none"><a href="maps/1207.html">IRB 1207</a></li>
+					<li style="display:none"><a href="maps/1210.html">IRB 1210</a></li>
+					<li style="display:none"><a href="maps/1212.html">IRB 1212</a></li>
+					<li style="display:none"><a href="maps/1212.html">IRB 1212</a></li>
+					<li style="display:none"><a href="maps/1248.html">IRB 1248</a></li>
+					<li style="display:none"><a href="maps/1250.html">IRB 1250</a></li>
+					<li style="display:none"><a href="maps/2210.html">IRB 2210</a></li>
+					<li style="display:none"><a href="maps/2212.html">IRB 2212</a></li>
+					<li style="display:none"><a href="maps/2214.html">IRB 2214</a></li>
+					<li style="display:none"><a href="maps/2218.html">IRB 2218</a></li>
+					<li style="display:none"><a href="maps/2240.html">IRB 2240</a></li>
+					<li style="display:none"><a href="maps/2242.html">IRB 2242</a></li>
+					<li style="display:none"><a href="maps/3220.html">IRB 3220</a></li>
+					<li style="display:none"><a href="maps/3226.html">IRB 3226</a></li>
+					<li style="display:none"><a href="maps/4124.html">IRB 4124</a></li>
+					<li style="display:none"><a href="maps/4128.html">IRB 4128</a></li>
+					<li style="display:none"><a href="maps/4130.html">IRB 4130</a></li>
+					<li style="display:none"><a href="maps/4132.html">IRB 4132</a></li>
+					<li style="display:none"><a href="maps/4158.html">IRB 4158</a></li>
+					<li style="display:none"><a href="maps/4162.html">IRB 4162</a></li>
+					<li style="display:none"><a href="maps/4202.html">IRB 4202</a></li>
+					<li style="display:none"><a href="maps/4206.html">IRB 4206</a></li>
+					<li style="display:none"><a href="maps/4212.html">IRB 4212</a></li>
+					<li style="display:none"><a href="maps/4214.html">IRB 4214</a></li>
+					<li style="display:none"><a href="maps/4222.html">IRB 4222</a></li>
+					<li style="display:none"><a href="maps/4238.html">IRB 4238</a></li>
+					<li style="display:none"><a href="maps/4244.html">IRB 4244</a></li>
+					<li style="display:none"><a href="maps/5140.html">IRB 5140</a></li>
+					<li style="display:none"><a href="maps/5146.html">IRB 5146</a></li>
+					<li style="display:none"><a href="maps/5148.html">IRB 5148</a></li>
+					<li style="display:none"><a href="maps/5150.html">IRB 5150</a></li>
+					<li style="display:none"><a href="maps/5154.html">IRB 5154</a></li>
+					<li style="display:none"><a href="maps/5164.html">IRB 5164</a></li>
+					<li style="display:none"><a href="maps/5204.html">IRB 5204</a></li>
+					<li style="display:none"><a href="maps/5210.html">IRB 5210</a></li>
+					<li style="display:none"><a href="maps/5214.html">IRB 5214</a></li>
+					<li style="display:none"><a href="maps/5216.html">IRB 5216</a></li>
+					<li style="display:none"><a href="maps/5222.html">IRB 5222</a></li>
+					<li style="display:none"><a href="maps/5236.html">IRB 5236</a></li>
+					<li style="display:none"><a href="maps/5238.html">IRB 5238</a></li>
+					<li style="display:none"><a href="maps/5240.html">IRB 5240</a></li>
+					<li style="display:none"><a href="maps/5244.html">IRB 5244</a></li>
+					<li style="display:none"><a href="maps/5250.html">IRB 5250</a></li>
+				</ul>
+				<ul id="rightList">
+					<li style="display:none"><a href="calendar.html#">Iribe Initiative for Inclusion and Diversity in Computing</a></li>
+					<li style="display:none"><a href="calendar.html#">Iribe Initiative and Code: BLACK Social</a></li>
+					<li style="display:none"><a href="calendar.html#">CS Student Organization Fair</a></li>
+					<li style="display:none"><a href="calendar.html#">Late CS Fall Career Center</a></li>
+					<li style="display:none"><a href="calendar.html#">Geico Lobby Day</a></li>
+				</ul>
+			</div>
+		</center>
+
+		<center>
+			<div class="keyboard" id="keyboard">
+				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+				<div>
+					<input type="button" value="1">
+					<input type="button" value="2">
+					<input type="button" value="3">
+					<input type="button" value="4">
+					<input type="button" value="5">
+					<input type="button" value="6">
+					<input type="button" value="7">
+					<input type="button" value="8">
+					<input type="button" value="9">
+					<input type="button" value="0">
+				</div>
+				<div>
+					<input id="q" type="button" value="Q">
+					<input id="w" type="button" value="W">
+					<input id="e" type="button" value="E">
+					<input id="r" type="button" value="R">
+					<input id="t" type="button" value="T">
+					<input id="y" type="button" value="Y">
+					<input id="u" type="button" value="U">
+					<input id="i" type="button" value="I">
+					<input id="o" type="button" value="O">
+					<input id="p" type="button" value="P">
+				</div>
+				<div>
+					<input id="a" type="button" value="A">
+					<input id="s" type="button" value="S">
+					<input id="d" type="button" value="D">
+					<input id="f" type="button" value="F">
+					<input id="g" type="button" value="G">
+					<input id="h" type="button" value="H">
+					<input id="j" type="button" value="J">
+					<input id="k" type="button" value="K">
+					<input id="l" type="button" value="L">
+				</div>
+				<div>
+					<input id="z" type="button" value="Z">
+					<input id="x" type="button" value="X">
+					<input id="c" type="button" value="C">
+					<input id="v" type="button" value="V">
+					<input id="b" type="button" value="B">
+					<input id="n" type="button" value="N">
+					<input id="m" type="button" value="M">
+					<input id="back" type="button" value="&#8592;">
+				</div>
+				<div>
+					<input id="caps" type="button" value="&#8679">
+					<input id="space" type="button" value=" ">
+					<input id="clear" type="reset" value="clear">
+				</div>
+			</div>
+		</center>
+	</div>
+</body>
+</html>

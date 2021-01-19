@@ -1,0 +1,88 @@
+<html lang=en>
+<head>
+	<meta charset="UTF-8"> 
+	<title>About</title>
+	<link rel="stylesheet" href="./css/kiosk_style.css">
+	<link rel="stylesheet" href="./css/about_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="img/favicon.png">
+	<script type="text/javascript" src="./js/kiosk_scripts.js"></script> 
+	<script type="text/javascript" src="./js/about_scripts.js"></script> 
+</head>
+
+<body onload="showTime();selectSlide1(1);selectSlide2(1);">
+<script type="text/javascript" src="./common/header.js"></script> 
+<script type="text/javascript" src="./common/sidenav.js"></script> 
+<script type="text/javascript" src="./common/footer.js"></script> 
+	
+<div class="main">
+	<center><div class="title"><h1>Introduction To Computer Science</h1></div></center>
+
+	<center><h3>Sandbox Activities</h3></center>
+	<div id="slideshow1" class="slideshow-container">
+		<div class="slides fade">
+  			<center><img src="./img/sand/sandbox1.jpg" class="slide">
+  			<div class="text">Built in @UMDCompSci Sandbox maker space for @bitcmp.</div></center>
+		</div>
+		<div class="slides fade">
+			<center><img src="./img/sand/sandbox2.jpg" class="slide">
+  			<div class="text">Built in @UMDCompSci Sandbox maker space for @bitcmp.</div></center>
+		</div>
+		<div class="slides fade">
+  			<center><img src="./img/sand/sandbox3.jpg" class="slide">
+  			<div class="text">CMSC298P: Prototyping and Fabrication of Cyberphysical System, taught in Sandbox by @wpugh.</div></center>
+        </div>
+	    <div class="slides fade">
+  			<center><img src="./img/sand/sandbox4.jpg" class="slide">
+  			<div class="text">CMSC298P: Prototyping and Fabrication of Cyberphysical System, taught in Sandbox by @wpugh.</div></center>
+		</div>
+		<div class="slides fade">
+  			<center><img src="./img/sand/sandbox5.jpg" class="slide">
+  			<div class="text">CMSC298P: Prototyping and Fabrication of Cyberphysical System, taught in Sandbox by @wpugh.</div></center>
+		</div>
+		<div class="slides fade">
+  			<center><img src="./img/sand/sandbox7.jpg" class="slide">
+  			<div class="text">CMSC298P: Prototyping and Fabrication of Cyberphysical System, taught in Sandbox by @wpugh.</div></center>
+		</div>		
+		<div class="slides fade">
+  			<center><img src="./img/sand/sandbox8.jpg" class="slide" alt="">
+  			<div class="text">An art installation at Bitcamp; something for people to decorate with art and electronics.</div></center>
+		</div>
+		<div style="text-align:center">
+			<span class="dot" onclick="selectSlide1(1)"></span>
+			<span class="dot" onclick="selectSlide1(2)"></span>
+			<span class="dot" onclick="selectSlide1(3)"></span>
+			<span class="dot" onclick="selectSlide1(4)"></span>
+			<span class="dot" onclick="selectSlide1(5)"></span>
+			<span class="dot" onclick="selectSlide1(6)"></span>
+			<span class="dot" onclick="selectSlide1(7)"></span>
+		</div>
+		<a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides1(1)">&#10095;</a>
+	</div>
+	<br>
+	<center><h3>Interesting CS Projects</h3></center>
+	<div id="slideshow2" class="slideshow-container">
+		<div class="slides fade">
+  			<center><img src="./img/sand/proj3.jpg" class="slide">
+  			<div class="text">UMD’s virtual reality students show off final projects, May 2015.</div></center>
+		</div>
+		<div class="slides fade">
+  			<center><img src="./img/sand/proj2.jpg" class="slide">
+  			<div class="text">CMSC470: UMD Undergrads' Trivia-Playing Programs take on Jeopardy Champions, June 2019.</div></center>
+		</div>
+		<div class="slides fade">
+  			<center><img src="./img/sand/proj1.jpg" class="slide">
+  			<div class="text">Brian Lee, Anthony Li, and Nao Rho present their final projects CMSC828D, Dec. 2018.</div></center>
+		</div>
+		<div style="text-align:center; padding-bottom: 30px;">
+			<span class="dot" onclick="selectSlide2(1)"></span>
+			<span class="dot" onclick="selectSlide2(2)"></span>
+			<span class="dot" onclick="selectSlide2(3)"></span>
+		</div>
+		<a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides2(1)">&#10095;</a>
+	</div> 
+</div>
+</body>
+</html>

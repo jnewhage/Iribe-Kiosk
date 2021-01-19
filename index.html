@@ -1,0 +1,51 @@
+<html lang=en>
+<head>
+	<meta charset="UTF-8"> 
+	<title>Home</title>
+	<link rel="stylesheet" href="./css/kiosk_style.css">
+	<link rel="stylesheet" href="./css/home_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="img/favicon.png">
+	<script type="text/javascript" src="./js/kiosk_scripts.js"></script>
+	<script type="text/javascript" src="./js/home_scripts.js"></script>
+</head>
+
+<body onload="showTime();selectSlide(1);playAudio();">
+<script type="text/javascript" src="./common/header.js"></script> 
+<script type="text/javascript" src="./common/sidenav.js"></script>
+<script type="text/javascript" src="./common/footer.js"></script> 
+
+<div class="main">
+	<center><div class="title"><h1>Welcome to The Brendan Iribe Center For Computer Science And Engineering</h1></div></center>
+	<div class="slideshow-container">
+		<div class="slides fade">
+			<center><img src="./img/homescreen/iribe-full-large.jpg" class="slide" alt="The Iribe Center"></center>
+		</div>
+		<div class="slides fade">
+			<center><img src="./img/homescreen/iribe-lobby-large.jpg" class="slide" alt="Lobby of Iribe full of students"></center>
+		</div>
+		<div class="slides fade">
+			<center><img src="./img/homescreen/auditorium-large.jpg" class="slide" alt="Iribe auditorium with students"></center>
+		</div>
+		<div class="slides fade">
+			<center><img src="./img/homescreen/iribe-classroom-large.jpg" class="slide" alt="Iribe classroom during a lecture"></center>
+		</div>
+		<div class="slides fade">
+			<center><img src="./img/homescreen/park-large.jpg" class="slide" alt="Reisse Park sign"></center>
+		</div>
+		<div style="text-align:center">
+			<span class="dot" onclick="selectSlide(1);"></span>
+			<span class="dot" onclick="selectSlide(2);"></span>
+			<span class="dot" onclick="selectSlide(3);"></span>
+			<span class="dot" onclick="selectSlide(4);"></span>
+			<span class="dot" onclick="selectSlide(5);"></span>
+		</div>
+		<a class="prev" onclick="plusSlides(-1);">&#10094;</a>
+		<a class="next" onclick="plusSlides(1);">&#10095;</a>
+	</div>
+	<audio controls id="welcome">
+		<source src="./audio/welcome.mp3" type="audio/mpeg">
+	</audio> 
+</div>
+</body>
+</html>
