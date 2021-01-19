@@ -1,0 +1,299 @@
+/* Map css style */
+
+.title {
+	padding-left: 4em;
+}
+
+.main {
+	z-index: 10;
+	overflow-x: auto;
+}
+
+.roomSearch {
+	display: flex;
+	height: 12.5%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-top: 1em;
+	padding-left: 1em;
+}
+
+.roomSearch input {
+	float:center;
+	background-color: rgb(241,241,241);
+	color: rgb(17,17,17);
+	border: none;
+	font-size: 2em;
+	width: 3em;
+	text-align: center;
+	border-radius: .2em;
+}
+
+.display {
+	margin-bottom: 2%;
+}
+
+.display img {
+	width: 33%;
+	margin-bottom: 3%;
+}
+
+.display img:hover {
+	background-color: rgba(255, 255, 255, .8);
+	cursor: pointer;
+	transform: scale(1.2);
+	transition: 0.6s ease;
+}
+
+.display img:focus {
+	background-color: rgba(255, 255, 255, .8);
+	transform: scale(1.2);
+	transition: 0.6s ease;
+}
+
+.button {
+	padding: 1em;
+	text-decoration: none;
+	font-size: 1.2em;
+	display: inline;
+	background-color: rgb(183, 20, 42);
+	color: rgb(241,241,241);
+	border-radius: .6em;
+	border: 2px solid rgb(17,17,17);
+	margin-left: 4em;
+	margin-right: 4em;
+	margin-bottom: 1em;
+}
+
+.button:hover {
+	color: rgb(229, 197, 102);
+	cursor: pointer;
+	border: 2px solid rgb(229, 197, 102);
+	background-color: rgb(183, 20, 42);
+	transition: 0.6s ease;
+	transform: scale(1.05);
+}
+
+.button:focus {
+	color: rgb(229, 197, 102);
+	background-color: rgb(183, 20, 42);
+	border: 2px solid rgb(229, 197, 102);
+	transition: 0.6s ease;
+	transform: scale(1.05);
+}
+
+.solo {
+	display:center;
+}
+
+.solo img {
+	height: 70%;
+	margin-bottom: 3%;
+}
+
+.dual {
+	margin-bottom: 2%;
+	display:block;
+}
+
+.dual img {
+	width: 45%;
+}
+
+.keyboard {
+	padding-bottom: 2%;
+	padding-top: .5%;
+}
+
+.keyboard input {
+	padding-top: .4em;
+	padding-bottom: .4em;
+	padding-left: 1.2em;
+	padding-right: 1.2em;
+	font-family:sans-serif;
+	font-size: 1.5em;
+	background-color: rgb(183, 20, 42);
+	color: rgb(241,241,241);
+	border: none;
+	border-radius: .6em;
+	border: 2px solid rgb(17,17,17);
+ }
+ 
+#page_back {
+	padding-top: .4em;
+	padding-bottom: .4em;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-left: 1%;
+	margin-top: 1%;
+	font-size: 1.8em;
+}
+ 
+.keyboard input:hover {
+	color: rgb(229, 197, 102);
+	background-color: rgb(116, 12, 12);
+	transition: 0.6s ease;
+	cursor: pointer;
+	transform: scale(1.1);
+	border: 2px solid rgb(229, 197, 102);
+}
+ 
+.keyboard input:focus {
+	color: rgb(229, 197, 102);
+	background-color: rgb(116, 12, 12);
+	transition: 0.6s ease;
+	transform: scale(1.1);
+	border: 2px solid rgb(229, 197, 102);
+}
+
+#back {
+	font-weight: bold;
+}
+
+@media only screen and (min-height: 750px) {
+	.keyboard input {font-size: 1.8em;}
+	#page_back {font-size: 2em;}
+}
+
+.alert {
+	padding: 1.4em;
+	background-color: rgb(183, 20, 42);
+	color: white;
+	width: 25%;
+	margin-top: 1%;
+	font-size: 1.2em;
+}
+
+.closebtn {
+	margin-left: 15px;
+	color: rgb(241, 241, 241);
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.closebtn:hover {
+	color: rgb(229, 197, 102);
+	transition: 0.3s ease;
+	transform: scale(1.02);
+}
+
+/* Map style */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /* overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  background-color: white;
+  margin-bottom: 5%;
+}
+
+.modal-content-img {
+  margin: auto;
+  display: block;
+  width: 70%;
+  max-width: 100%;
+  background-color: white;
+  margin-bottom: -10px;
+}
+
+/* The Close Button */
+.close {
+	position: absolute;
+	top: 2.5em;
+	right: 12%;
+	color: rgb(17,17,17);
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(229, 197, 102);
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.zoom-in-button {
+	position: absolute;
+	top: 3.5em;
+	right: 10%;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s ease;
+}
+
+.zoom-out-button {
+	position: absolute;
+	top: 5em;
+	right: 10%;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s ease;
+}
+
+.zoom {
+	background-color: transparent;
+	color: rgb(17, 17, 17);
+	border: none;
+	font-size: 1.2em;
+	padding: .5em;
+}
+
+.zoom:hover {
+	color: rgb(229, 197, 102);
+	cursor: pointer;
+	transition: 0.3s ease;
+	transform: scale(1.1);
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+.modal-content img {
+	margin-bottom: -4px;
+}
+
+.demo {
+	opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+	opacity: 1;
+}
+
+img.hover-shadow {
+	transition: 0.3s ease;
+}
+
+.hover-shadow:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.scroll a {
+	opacity: .8;
+}

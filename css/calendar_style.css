@@ -1,0 +1,316 @@
+/* Calendar css style */
+h3 {
+	position:relative;
+	display: inline-block;
+	width: 20%;
+	padding: .2em;
+	background-color: rgb(17, 17, 17);
+	color: rgb(241, 241, 241);
+	border-radius: .4em;
+	font-size: 1.4em;
+	right: 16em;
+	margin-bottom: 1em;
+}
+
+.month {
+	width: 88%;
+	height: 12.5%;
+	background-color: rgb(17,17,17);
+	color: rgb(241,241,241);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 1%;
+	border-radius: 1em;
+	margin-bottom: .5%;
+}
+
+.month i {
+	font-size: 2em;
+	background-color: rgb(183, 20, 42);
+	border-radius: .2em;
+	cursor: pointer;
+}
+
+.prev1 {
+	margin-right: 1em;
+	padding: .4em .8em .4em .8em;
+}
+
+.next1 {
+	margin-left: 1em;
+	padding: .4em .8em .4em .8em;
+}
+
+.prev1:hover, .next1:hover, .prev1:focus, .next1:focus {
+	background-color: rgba(183, 20, 42, .8);
+	border: 2px solid rgb(229, 197, 102);
+	color: rgb(229, 197, 102);
+	cursor: pointer;
+	transition: 0.3s ease;
+	transform: scale(1.2);
+}
+
+.month p {
+	font-size: 1.4em;
+}
+
+.calendar {
+	float: left;
+	margin-bottom: 2%;
+    width: 65%;
+}
+
+.weekdays {
+  width: 91%;
+  height: 4em;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0em;
+  background-color: rgb(183, 20, 42);
+  color: rgb(241,241,241);
+  float: left;
+  border-radius: 1.2em;
+  margin-left: .5em;	
+}
+
+.weekdays div {
+  width: 5em;
+  justify-content: left;
+  align-text: center;
+  font-size: 1.3em;
+}
+
+#first {
+	padding-left: 0;
+}
+
+#last {
+	padding-right: 0;
+}
+
+.days {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 0.4em;
+	padding-top: 0.4em;
+	margin-left: .4em;
+}
+
+#prev-date, #next-date {
+	background-color: rgb(116, 12, 12);
+}
+
+.days div {
+	font-size: 1.2em;
+    height: 4.2em;
+    width: 4.2em;
+	margin: 0.2em;
+	margin-bottom: 1%;
+	margin-right: .55em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.2s;
+	border-radius: 10px;
+	background-color: rgb(183, 20, 42);
+	color: rgb(241,241,241);
+	border: 2px solid rgb(17,17,17);
+}
+
+.days div:hover:not(.today) {
+	background-color: rgb(116, 12, 12);
+	color: rgba(229, 197, 102, 0.9);
+	transform: scale(1.4);
+	border: 2px solid rgba(229, 197, 102, 0.9);
+	cursor: pointer;
+}
+
+@media only screen and (min-height: 750px) {
+	.days {width: 65em;}
+	.days div {font-size: 1.8em;}
+}
+
+#description_title {
+	font-size: 1.4em;
+}
+
+#description {
+	font-size: 1em;
+}
+
+.side {
+	float:left;
+	width: 34%;
+	display: block;
+}
+
+.form {
+	font-size: 1.4em;
+	margin-top: -1em;
+	background-color: rgb(183, 20, 42);
+	color: rgb(241, 241, 241);
+	border-radius: 1em;
+    height: 10em;
+}
+
+h2 {
+	margin-bottom: .4em;
+}
+
+.alert {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	height: 14em;
+	display: flex;
+	text-align:center;
+	border-radius: 1em;
+	margin-top: 0em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 1.2em;
+	margin-bottom: 2em;
+}
+
+.closebtn {
+	color: rgb(241, 241, 241);
+	font-weight: bold;
+	float: right;
+	font-size: 26px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+	margin-top: .5em;
+}
+
+.closebtn:hover {
+	color: rgb(229, 197, 102);
+	transition: 0.3s ease;
+	transform: scale(1.02);
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 1em;
+    margin-bottom: 1.5em;
+    margin-top: .4em;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}   
+
+.checkmark {
+    position: absolute;
+    left: 10%;
+    height: 1.1em;
+    width: 1.1em;
+    transform: scale(2);
+    background-color: rgb(241, 241, 241);
+}
+
+.container:hover input ~ .checkmark {
+    background-color: rgb(241, 241, 241);
+    transition: 0.3s ease;
+    transform: scale(2.4);
+}
+
+.container input:checked ~ .checkmark {
+    background-color: rgb(241, 241, 241);
+    transition: 0.3s ease;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: .4em;
+    top: .225em;
+    width: .225em;
+    height: .4em;
+    border: solid rgb(17, 17, 17);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.list {
+	width: 100%;
+	margin-top: 35em;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 0em;
+	width: 50%;
+	margin-bottom: 10%;
+	float: left;
+}
+
+#dates {
+	margin-top: .5em;
+}
+
+.dates {
+	margin-bottom: .85em;	
+}
+
+li {
+	width: 95%;
+	/* border-bottom: 1.5px solid rgb(17,17,17); */
+	background-color: white;
+	padding: .75em;
+	text-decoration: none;
+	font-size: 1.5em;
+	color: rgb(17,17,17);
+	display: block;
+}
+
+li a {
+	margin-top: -1em;
+	width: 100%;
+	/* height: 2.75em; */
+	border: 2px solid rgb(17,17,17);
+	background-color: rgb(183, 20, 42);
+	color: rgb(241, 241, 241);
+	border-radius: 1em;
+	padding: .75em;
+	text-decoration: none;
+	font-size: 1em;
+	display: block;
+}
+
+li a:hover {
+	background-color: rgb(183, 20, 42);
+	color: rgba(229, 197, 102);
+	border: 2px solid rgb(229, 197, 102);
+	transition: 0.6s ease;
+	transform: scale(1.1);
+}
+
+.scroll a {
+	opacity: .8;
+}
